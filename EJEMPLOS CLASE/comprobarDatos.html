@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function comprobarDatos(){
+            if(document.form1.threeChar.value.length == 3){
+                //return true;
+                console.log("numero de caracteres correcto");
+            } else {
+                alert("introduce exactamente 3 caracteres " + document.form1.threeChar.value + " no es valido");
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form action="" name="form1">
+        <input type="text" name="threeChar" onchange="comprobarDatos()">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function comprobar(){
+            if (parseInt(document.getElementsByTagName("input")[0].value)>=18){
+                document.getElementsByName("pantalla")[0].value="Bienvenido a nuestra app";
+            }else {
+                document.getElementsByName("pantalla")[0].value="Lo sentimos \n No puede acceder";
+            }
+            document.getElementsByTagName("input")[0].value="";//QUE ME EXPLIQUE EL GPT EL TAGNAME
+
+        }
+
+    </script>
+</head>
+<body>
+    <h3>comprobacion de edad</h3>
+    <label for="">EDAD:</label><input type="text" autofocus><br><br>
+    <input type="button" value="VALIDAR" onclick="comprobar()"><br><br>
+    <textarea name="pantalla" rows="5" cols="50"></textarea>
+</body>
+</html>

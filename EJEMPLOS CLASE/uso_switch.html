@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function ValidarFruta(){
+        let tipoFruta=document.getElementsByTagName("input")[0].value;
+        switch (tipoFruta) {
+            case "Naranjas":
+            document.getElementsByTagName("textarea")[0].value="Naranjas cuestan 0,50€ el kilo.";
+            break;
+            case "Manzanas":
+            document.getElementsByTagName("textarea")[0].value="Manzanas cuestan 0,32€ el kilo.";
+            break;
+            case "Plátanos":
+            document.getElementsByTagName("textarea")[0].value="Plátanos cuestan 0,48€ el kilo.";
+            break;
+            case "Cerezas":
+            document.getElementsByTagName("textarea")[0].value="Cerezas cuestan 3,00€ el kilo.";
+            break;
+            case "Mangos":
+            document.getElementsByTagName("textarea")[0].value="Mangos cuestan 0,56€ el kilo.";
+            break;
+            case "Papayas":
+            document.getElementsByTagName("textarea")[0].value="Mangos y papayas cuestan 2,79€ el kilo.";
+            break;
+            default:
+            document.getElementsByTagName("textarea")[0].value="Disculpa, no tenemos el tipo de fruta " + tipoFruta + ".";
+        }
+        console.log("¿Te gustaría tomar algo?");
+
+        }
+    </script>
+
+</head>
+<body>
+    <h3>comprobacion de Fruta</h3>
+    <label for="">FRUTA:</label><input type="text" onchange="ValidarFruta()" autofocus><br><br>
+
+    <textarea rows="6" cols="30"></textarea>
+    
+</body>
+</html>
