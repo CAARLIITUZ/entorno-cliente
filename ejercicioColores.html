@@ -14,13 +14,20 @@
                 document.getElementsByTagName("textarea")[0].value += color + "\n";
             });
         }
+
+        function mostrarListaColores2() {
+            for (var i=0; i<ListaColores.length; i++){
+                document.getElementsByTagName("textarea")[0].value += ListaColores[i] + "\n";
+
+            }
+        }
     </script>
 </head>
 
 <body>
     <h3>MOSTREMOS LISTA DE COLORES</h3>
 
-    <input type="button" value="Mostrar colores" onclick="mostrarListaColores()">
+    <input type="button" value="Mostrar colores" onclick="mostrarListaColores2()">
     <br><br>
 
     <textarea rows="10" cols="30"></textarea>
