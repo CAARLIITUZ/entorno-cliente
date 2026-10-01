@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        var ListaColores = ["Rojo", "Azul", "Verde", "Morado", "Rosa", 
+                            "Amarillo", "Negro", "Marrón", "Blanco", "Naranja"];
+
+        function mostrarListaColores() {
+            ListaColores.forEach((color, indice) => {
+                document.getElementsByTagName("textarea")[0].value += color + "\n";
+            });
+        }
+    </script>
 </head>
+
 <body>
-    <p>Definir un literal Array de una lista de 10 colores,
-        y al darle al boton de visualizar, en el text area deben aparecer
-        los elementos del array
-    </p>
+    <h3>MOSTREMOS LISTA DE COLORES</h3>
+
+    <input type="button" value="Mostrar colores" onclick="mostrarListaColores()">
+    <br><br>
+
+    <textarea rows="10" cols="30"></textarea>
 </body>
 </html>
