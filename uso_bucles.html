@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var intento = 0;
+
+    function ValidarUsuario(){
+        var usuario = "carlituz";
+        var contraseña = "hola1234";
+        var intentosMax = 3;
+
+        var usuarioInt = document.getElementById("usuario").value;
+        var contraseñaInt = document.getElementById("contraseña").value;
+
+        if (intento >= intentosMax) {
+            document.getElementsByTagName("textarea")[0].value ="BLOQUEO DEL SISTEMA, HA ALCANZADO LOS 3 INTENTOS MAXIMOS";
+            return;
+        }
+
+        while (intento < intentosMax) {
+            if (usuarioInt == usuario && contraseñaInt == contraseña) {
+                document.getElementsByTagName("textarea")[0].value ="BIENVENIDO AL SISTEMA";
+                break;
+            } else {
+                intento++;
+                document.getElementsByTagName("textarea")[0].value ="USUARIO O CONTRASEÑA INCORRECTOS";
+                break;
+            }
+        }
+
+        if (intento == intentosMax) {
+            document.getElementsByTagName("textarea")[0].value ="BLOQUEO DEL SISTEMA, HA ALCANZADO LOS 3 INTENTOS MAXIMOS";
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>USAREMOS UN BUCLE PARA VERIFICAR IDENTIDAD DE UN USUARIO</h1>
+
+    <h3>Comprobación de Usuario</h3>
+    <label>USUARIO:</label>
+    <input id="usuario" type="text">
+    <br><br>
+
+    <h3>Comprobación de Contraseña</h3>
+    <label>Contraseña:</label>
+    <input id="contraseña" type="password">
+    <br><br>
+
+    <button onclick="ValidarUsuario()">Validar usuario</button>
+    <br><br>
+
+    <textarea rows="6" cols="45"></textarea>
+</body>
+</html>
