@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 16 - Date</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function comprobarEdad() {
+            var fechaNac = new Date(document.getElementById("nacimiento").value);
+            var hoy = new Date();
+
+            var edad = hoy.getFullYear() - fechaNac.getFullYear();
+
+            if (hoy.getMonth() < fechaNac.getMonth() ||(hoy.getMonth() === fechaNac.getMonth() &&hoy.getDate() < fechaNac.getDate())
+            ) {
+                edad--;
+            }
+
+            if (edad >= 18) {
+                document.getElementById("resultado").value = "ERES MAYOR DE EDAD";
+            } else {
+                document.getElementById("resultado").value = "ERES MENOR DE EDAD";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2>Comprobar mayoría de edad</h2>
+
+    <label>Fecha de nacimiento:</label>
+    <input type="date" id="nacimiento">
+
+    <button onclick="comprobarEdad()">Comprobar</button>
+
+    <br><br>
+    <textarea id="resultado" rows="5" cols="45"></textarea>
+</body>
+
+</html>

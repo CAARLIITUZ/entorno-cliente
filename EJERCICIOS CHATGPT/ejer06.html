@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 06 - getElementById</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function copiar(){
+            var textoEntrada = document.getElementById("entrada").value;
+
+            var textoSalida = textoEntrada;
+
+            document.getElementById("salida").value = textoSalida;
+        }
+
+        function borrar(){
+            document.getElementById("entrada").value="";
+            document.getElementById("salida").value="";
+        }
+
+
+    </script>
+</head>
+<body>
+    <h2>Copiar texto</h2>
+
+    <label>Entrada:</label>
+    <input type="text" id="entrada">
+
+    <br><br>
+
+    <label>Salida:</label>
+    <input type="text" id="salida">
+
+    <br><br>
+
+    <button onclick="copiar()">Copiar</button>
+    <button onclick="borrar()">Borrar</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10 - Click</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function saludar(persona){
+            console.log("Hola " + persona);
+        }
+
+        function despedir(){
+            console.log("HASTA LUEGO");
+        }
+
+    </script>
+</head>
+<body>
+    <h2>Saludador</h2>
+
+    <label>Nombre:</label>
+    <input type="text" id="nombre">
+
+    <button onclick="saludar(document.getElementById('nombre').value)">
+        Saludar
+    </button>
+
+    <button onclick="despedir()">Despedirse</button>
+</body>
+</html>

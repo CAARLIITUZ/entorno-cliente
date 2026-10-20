@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 01 - Edad</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function comprobarEdad(){
+            var edad = document.getElementById("edad").value;
+            
+            if (edad ===""){
+                document.getElementsByTagName("textarea")[0].value = "Campo vacío ";
+            }else if (isNaN(edad)){
+                document.getElementsByTagName("textarea")[0].value = "No es un número";
+            }else if (edad >= 120){
+                document.getElementsByTagName("textarea")[0].value = "Estas FLIPADO";
+            }else if(edad <= 0){
+                document.getElementsByTagName("textarea")[0].value = "EDAD NO PERMITIDA, NEGATIVO";
+            }else if (edad >=18){
+                document.getElementsByTagName("textarea")[0].value = "Bienvenido. Usuario mayor de edad";
+            }else{
+                document.getElementsByTagName("textarea")[0].value = "Menor de edad";
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h2>Comprobar edad</h2>
+
+    <label>Edad:</label>
+    <input type="text" id="edad">
+
+    <button onclick="comprobarEdad()">Comprobar</button>
+
+    <br><br>
+    <textarea id="resultado" rows="4" cols="40"></textarea>
+</body>
+
+</html>

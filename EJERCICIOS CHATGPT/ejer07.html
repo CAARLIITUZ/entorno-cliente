@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 07 - TagName</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function leerCajas(){
+            var contadorCajas = 0;
+            var cajaNombre = document.getElementsByTagName("input")[0].value;
+            var cajaCiudad = document.getElementsByTagName("input")[1].value;
+            var cajaColorFav= document.getElementsByTagName("input")[2].value;
+
+            if (cajaNombre !== ""){
+                contadorCajas++;
+            }
+
+            if (cajaCiudad !== ""){
+                contadorCajas++;
+            }
+
+            if (cajaColorFav !== ""){
+                contadorCajas++;
+            }
+
+            document.getElementsByTagName("textarea")[0].value = "Nº de cajas = "+ contadorCajas + "\n" +
+            "Nombre: " + cajaNombre + "\n" +
+            "Ciudad: " + cajaCiudad + "\n" +
+            "Color Favorito: " + cajaColorFav;
+            
+
+        }
+
+        function sumar(){
+            var num1 = document.getElementsByTagName("input")[0].value;
+            var num2 = document.getElementsByTagName("input")[1].value;
+            var num3 = document.getElementsByTagName("input")[2].value;
+            var resultado = 0;
+
+            if(num1 === ""){
+                document.getElementsByTagName("textarea")[0].value ="Falta campo 1";
+            }else{
+                num1 = Number(num1);
+            }
+
+            if(num2 === "" || isNaN(num2)){
+                num2=0;
+            }else{
+                num2 = Number(num2);
+            }
+
+            if(num3 === "" || isNaN(num3)){
+                num3=0;
+            }else{
+                num3 = Number(num3);
+            }
+            resultado = num1 + num2 + num3;
+            document.getElementsByTagName("textarea")[0].value = "Resultado = "+resultado;
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h2>Leer cajas de texto</h2>
+
+    <label>Nombre:</label>
+    <input type="text" value="Ana">
+
+    <br><br>
+
+    <label>Ciudad:</label>
+    <input type="text" value="Madrid">
+
+    <br><br>
+
+    <label>Color favorito:</label>
+    <input type="text" value="Azul">
+
+    <br><br>
+
+    <button onclick="sumar()">Leer cajas</button>
+
+    <br><br>
+    <textarea id="resultado" rows="7" cols="40"></textarea>
+</body>
+</html>

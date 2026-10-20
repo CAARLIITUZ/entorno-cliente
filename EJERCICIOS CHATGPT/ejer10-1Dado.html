@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10 - Dado</title>
+    <script>
+        function lanzarDado() {
+            // ESCRIBE AQUÍ TU JAVASCRIPT
+
+            let min =1;
+            let max=6;
+
+            let resultado;
+
+            resultado = Math.floor(Math.random()*max)+min;
+            document.getElementById("resultado").value ="Numero lanzado "+ resultado;
+        }
+    </script>
+</head>
+<body>
+    <h2>Lanzamiento de dado</h2>
+
+    <button onclick="lanzarDado()">Lanzar dado</button>
+
+    <br><br>
+
+    <textarea id="resultado" rows="3" cols="30"></textarea>
+</body>
+</html>

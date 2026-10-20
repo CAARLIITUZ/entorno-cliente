@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 02 - Número</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function clasificar(){
+            var numero = document.getElementById("numero").value;
+
+            if(numero ===""){
+                document.getElementById("resultado").textContent = "Caja vacía";
+            }else if (numero ==0){
+                document.getElementById("resultado").textContent = "Numero igual a 0";
+            }else if (numero > 0){
+                document.getElementById("resultado").textContent = "Es un número positivo";
+            }else{
+                document.getElementById("resultado").textContent = "Es un número negativo";
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <h2>Clasificador de números</h2>
+
+    <label>Introduce un número:</label>
+    <input type="text" id="numero">
+
+    <button onclick="clasificar()">Clasificar</button>
+
+    <p id="resultado"></p>
+</body>
+</html>

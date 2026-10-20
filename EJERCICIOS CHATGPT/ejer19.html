@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 19 - Login</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        var intento = 0;
+
+        function validarUsuario() {
+            var usuario = "carlituz";
+            var contraseña = "hola1234";
+            var usuarioInt = document.getElementById("usuario").value;
+            var contraseñaInt = document.getElementById("contrasena").value;
+
+            if (intento >= 3) {
+                document.getElementById("resultado").value = "SISTEMA BLOQUEADO";
+            } else if (usuarioInt === usuario && contraseñaInt === contraseña) {
+                document.getElementById("resultado").value = "BIENVENIDO AL SISTEMA";
+            } else {
+                intento++;
+
+                if (intento >= 3) {
+                    document.getElementById("resultado").value = "SISTEMA BLOQUEADO";
+                } else {
+                    document.getElementById("resultado").value = "INCORRECTO. Intentos: " + intento;
+                }
+            }
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h2>Acceso al sistema</h2>
+
+    <label>Usuario:</label>
+    <input type="text" id="usuario">
+
+    <br><br>
+
+    <label>Contraseña:</label>
+    <input type="password" id="contrasena">
+
+    <br><br>
+
+    <button onclick="validarUsuario()">Entrar</button>
+
+    <br><br>
+    <textarea id="resultado" rows="5" cols="55"></textarea>
+</body>
+
+</html>

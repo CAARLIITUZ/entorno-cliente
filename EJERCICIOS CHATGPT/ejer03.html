@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 03 - Frutas</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function consultarFruta(fruta){
+            var seleccion = fruta.value;
+
+            if(seleccion ===""){
+                document.getElementsByTagName("textarea")[0].value = "CAMPO VACIO";
+            }else{
+                switch(seleccion){
+                case "Manzanas":
+                    document.getElementById("resultado").value = "Manzanas cuestan 0,50 €/Kg";
+                break;
+
+                case "Peras":
+                    document.getElementById("resultado").value = "Peras cuestan 0,40 €/Kg";
+                break;
+
+                case "Platanos":
+                    document.getElementById("resultado").value = "Platanos cuestan 0,30 €/Kg";
+                break;
+
+                case "Naranjas":
+                    document.getElementById("resultado").value = "Naranjas cuestan 0,70 €/Kg";
+                break;
+
+                default:
+                document.getElementById("resultado").value = "Ni idea de lo que pides hijo";
+                    
+            }
+
+            }
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h2>Precios de frutas</h2>
+
+    <label>Fruta:</label>
+    <input type="text" id="fruta" onchange="consultarFruta(this)">
+
+    <br><br>
+    <textarea id="resultado" rows="5" cols="40"></textarea>
+</body>
+</html>

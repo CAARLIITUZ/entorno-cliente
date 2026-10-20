@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 04 - Tabla</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function generarTabla(){
+            var numero = document.getElementsByTagName("input")[0].value;
+            var contador = 1;
+            var resultado = 0;
+
+            if (isNaN(numero)){
+                document.getElementsByTagName("textarea")[0].value = "Introduce un numero";
+
+            }else if (numero <=0){
+                document.getElementById("resultado").value = "Introduce un número positivo";
+            }else {
+                document.getElementById("resultado").value="";
+                for(contador; contador<=10;contador++){
+                resultado = numero * contador;
+                document.getElementById("resultado").value += numero + " x " + contador + " = " +  resultado + "\n";
+            }
+
+            }
+            
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h2>Tabla de multiplicar</h2>
+
+    <label>Número:</label>
+    <input type="text" id="numero">
+
+    <button onclick="generarTabla()">Generar tabla</button>
+
+    <br><br>
+    <textarea id="resultado" rows="12" cols="35"></textarea>
+</body>
+</html>

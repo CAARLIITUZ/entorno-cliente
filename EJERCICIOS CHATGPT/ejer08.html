@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 08 - Name y this</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function mostrar(objeto) {
+            document.getElementById("resultado").value =
+             objeto.name + "\n" +
+             objeto.value + "\n" +
+                "Total de campos: " +
+            document.getElementsByName("consulta").length;
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h2>Consultar campos</h2>
+
+    <label>Nombre:</label>
+    <input type="text" name="consulta" value="Ana"
+           onchange="mostrar(this)">
+
+    <br><br>
+
+    <label>Apellidos:</label>
+    <input type="text" name="consulta" value="López"
+           onchange="mostrar(this)">
+
+    <br><br>
+
+    <label>Ciudad:</label>
+    <input type="text" name="consulta" value="Madrid"
+           onchange="mostrar(this)">
+
+    <br><br>
+
+    <textarea id="resultado" rows="8" cols="40"></textarea>
+</body>
+</html>

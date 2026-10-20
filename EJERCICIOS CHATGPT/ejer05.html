@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 05 - Cuenta atrás</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        function contar(){
+            var contador  = document.getElementById("inicio").value;
+
+            contador = Number(contador);
+
+            if(contador ===""){
+                document.getElementsByTagName("textarea")[0].value = "CAMPO VACIO";
+            }else if (isNaN(contador)){
+                document.getElementById("resultado").value ="METE UN NUMERO";
+            }else if (contador <=0){
+                document.getElementById("resultado").value="Brother, mete un numero POSITIVO";
+
+            }else if (contador >=1 && contador <=20){
+
+                document.getElementById("resultado").value="";
+                document.getElementsByTagName("textarea")[0].value = "Inicio cuenta ATRAS \n";
+                while(contador>=1){
+                document.getElementsByTagName("textarea")[0].value += contador + "\n";
+                contador --;
+            }
+            document.getElementsByTagName("textarea")[0].value += "DESPEGUE";
+            }else {
+                document.getElementsByTagName("textarea")[0].value = "METE UN NUMERO ENTRE 1 Y 20";
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h2>Cuenta atrás</h2>
+
+    <label>Número inicial:</label>
+    <input type="text" id="inicio">
+
+    <button onclick="contar()">Iniciar</button>
+
+    <br><br>
+    <textarea id="resultado" rows="10" cols="30"></textarea>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 09 - Funciones</title>
+    <script>
+        // ESCRIBE AQUÍ TU JAVASCRIPT
+        
+        function calcularTotal(precio, cantidad){
+            let resultado = precio * cantidad;
+            return resultado;
+        }
+
+        function calcular(){
+            let precioInput = document.getElementById("precio").value;
+            let cantidadInput = document.getElementById("cantidad").value;
+            
+            if (precioInput === ""){
+                document.getElementById("resultado").textContent = "Campo1 Vacio";
+            }else if (isNaN(precioInput)){
+                document.getElementById("resultado").textContent= "Pon 1 numero en el campo 1";
+            }else if (cantidadInput === ""){
+                document.getElementById("resultado").textContent = "Campo 2 vacio";
+            }else if (isNaN(cantidadInput)){
+                document.getElementById("resultado").textContent = "Pon un numero en el campo 2";
+            }else {
+            precioInput = Number(precioInput);
+            cantidadInput = Number(cantidadInput);
+
+            let preciofinal = calcularTotal(precioInput,cantidadInput);
+
+            document.getElementById("resultado").textContent = "Precio Final = "+ preciofinal+ "€";
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h2>Calcular importe</h2>
+
+    <label>Precio por unidad:</label>
+    <input type="text" id="precio">
+
+    <br><br>
+
+    <label>Cantidad:</label>
+    <input type="text" id="cantidad">
+
+    <br><br>
+
+    <button onclick="calcular()">Calcular total</button>
+
+    <p id="resultado"></p>
+</body>
+</html>
