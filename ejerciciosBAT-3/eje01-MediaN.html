@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    
+    function verAleatorio(){
+        var cadenaInput = document.getElementsByTagName("input")[0].value;
+        var strInput= new String(cadenaInput);
+        let min=0;
+        let max= strInput.length;
+        var n_random = Math.floor(Math.random*max)+min;
+
+        var caracterRandom=strInput[n_random];
+
+        document.getElementById("resultado").value= "El caracter aleatorio es "+caracterRandom;
+
+    }
+
+</script>
+<body>
+    <h1>Media de serie de números</h1>
+    <label>Introduzca una frase: <input type="text"> </label>
+    <button type="button" onclick="verAleatorio()">Ver</button>
+    <br>
+    <br>
+    <textarea id="resultado" cols="45" rows="10"></textarea>
+</body>
+</html>
