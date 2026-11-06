@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var textoEntrada = prompt("Dime un tipo de queso");
+        var miCadena = "manchego, torta del casar, idiazabal";
+        var miCadenaMayus = "Manchego, Torta del Casar, Idiazabal";
+
+        var minusculas = miCadena.indexOf(textoEntrada);
+        var mayusculas = miCadenaMayus.indexOf(textoEntrada);
+        
+        if (minusculas == -1){
+            alert("El tipo solicitado no se encuentra en minusculas")
+        }else{
+            alert("El tipo solicitado se encuentra en minusculas ")
+        }
+
+        if (mayusculas == -1){
+            alert("El tipo solicitado no se encuentra en mayusculas")
+        }else{
+            alert("El tipo solicitado se encuentra en mayusculas")
+        }
+
+
+    </script>
+</body>
+</html>
